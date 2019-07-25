@@ -1,7 +1,9 @@
 <?php
 	function check_login($fname,$lname,$pass)
 	{
-		$dbc = mysql_connect('localhost','root','');
+		header("Access-Control-Allow-Origin: *");
+		 $dbc = mysqli_connect("localhost","id8941173_galuh","12345","id8941173_kontak") or die ("could not connect database");
+		//$dbc = mysql_connect('localhost','id10286545_galuh','12345','id10286545_restaurant');
 		if(!$dbc)
 			die('NOT CONNECTED:' . mysql_error());
 		$db_selected = mysql_select_db("restaurant",$dbc);
